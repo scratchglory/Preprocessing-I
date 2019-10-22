@@ -50,8 +50,8 @@ center,
 dl,
 dt,
 dd,
-ol,
-ul,
+// ol,
+// ul,
 li,
 fieldset,
 form,
@@ -111,7 +111,7 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  //   list-style: none;
 }
 blockquote,
 q {
@@ -132,18 +132,44 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 html,
 body {
   height: 100%;
+  width: 100%;
+  margin: 1%;
+}
+
+h1 {
+  text-align: center;
+  color: blue;
+  font-size: 28px;
 }
 
 header {
-  padding: 2%;
-  h1 {
-    text-align: center;
-    color: blue;
-    font-size: 28px;
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0.5rem;
+    a {
+      text-decoration: none;
+      padding: 0.25em;
+      margin: 0 0.75rem;
+      border: 2px dotted gray;
+    }
+  }
+}
+
+.section1 {
+  margin: 1rem 0;
+  display: flex;
+  //   justify-content: space-evenly;
+
+  .skills {
+    width: 100%;
+    margin-left: 50%;
   }
 }
