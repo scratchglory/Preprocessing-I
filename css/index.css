@@ -125,18 +125,16 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
-  font-size: 10px;
 }
 html,
 body {
   height: 100%;
   width: 100%;
-  margin: 1%;
+  font-size: 10px;
 }
-h1 {
-  text-align: center;
-  color: blue;
-  font-size: 28px;
+.container {
+  width: 900px;
+  margin: 0 auto;
 }
 header nav {
   display: flex;
@@ -149,18 +147,40 @@ header nav a {
   padding: 0.25em;
   margin: 0 0.75rem;
   border: 2px dotted gray;
+  font-size: 1.6rem;
 }
 .section1 {
   width: 100%;
   margin: 1rem 0;
   display: flex;
+  justify-content: space-evenly;
+}
+.section1 h1 {
+  text-align: center;
+  color: blue;
+  font-size: 3.5rem;
 }
 .section1 .profile {
   margin: 1%;
 }
 .section1 .skills {
   width: 100%;
-  margin-left: 50%;
+}
+.section1 .skills h2 {
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  margin: 5%;
+}
+.section1 .skills .skills-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+.section1 .skills .skills-info h3 {
+  text-align: center;
+  width: 20%;
+  font-size: 2.6rem;
+  margin: 1%;
 }
 .section2 {
   width: 100%;
@@ -185,4 +205,10 @@ header nav a {
 .section3 .doggo p {
   margin: 1% 0;
   width: 75%;
+}
+.headerSize2 {
+  font-size: 3rem;
+}
+.headerSize3 {
+  font-size: 2.6rem;
 }
