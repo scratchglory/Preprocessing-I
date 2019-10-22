@@ -48,6 +48,8 @@ center,
 dl,
 dt,
 dd,
+ol,
+ul,
 li,
 fieldset,
 form,
@@ -149,10 +151,38 @@ header nav a {
   border: 2px dotted gray;
 }
 .section1 {
+  width: 100%;
   margin: 1rem 0;
   display: flex;
+}
+.section1 .profile {
+  margin: 1%;
 }
 .section1 .skills {
   width: 100%;
   margin-left: 50%;
+}
+.section2 {
+  width: 100%;
+  margin: 2% 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.section3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2% 0;
+}
+.section3 h2 {
+  width: 100%;
+}
+.section3 .doggo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 1% 0;
+}
+.section3 .doggo p {
+  margin: 1% 0;
+  width: 75%;
 }
