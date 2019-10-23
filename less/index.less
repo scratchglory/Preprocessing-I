@@ -130,6 +130,11 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+@colorBlue: blue;
+@colorIndianRed: red;
+@colorGray: gray;
+@colorLightGray: lightgray;
+
 * {
   box-sizing: border-box;
 }
@@ -146,6 +151,11 @@ body {
   margin: 0 auto;
 }
 
+h2 {
+  color: @colorIndianRed;
+  border-bottom: 2px solid @colorIndianRed;
+}
+
 header {
   nav {
     display: flex;
@@ -156,7 +166,7 @@ header {
       text-decoration: none;
       padding: 0.25em;
       margin: 0 0.75rem;
-      border: 2px dotted gray;
+      border: 2px dotted @colorGray;
       font-size: 1.6rem;
     }
   }
@@ -167,39 +177,57 @@ header {
   margin: 1rem 0;
   display: flex;
   justify-content: space-evenly;
+  background-color: @colorLightGray;
 
   h1 {
     text-align: center;
-    color: blue;
+    color: @colorBlue;
     font-size: 3.5rem;
   }
 
   .profile {
     margin: 1%;
+    width: 400px;
+
+    .image {
+      text-align: center;
+      width: 100%;
+      //   border-radius: 0%;
+
+      .charles {
+        //   height: 250px;
+        width: 100%;
+        border-radius: 90%;
+      }
+    }
   }
 
   .skills {
     width: 100%;
-    // margin-left: 25%;
-    // display: flex;
 
     h2 {
       .headerSize2();
       width: 100%;
       text-align: center;
-      margin: 5%;
     }
 
     .skills-info {
       display: flex;
-      justify-content: space-evenly;
-      //   flex-direction: column;
-
-      h3 {
-        text-align: center;
-        width: 20%;
+      justify-content: space-between;
+      margin: 5% 0;
+      ul {
         .headerSize3();
-        margin: 1%;
+        margin: 0 0 0 8%;
+      }
+
+      li {
+        padding: 5%;
+      }
+
+      p {
+        height: 100%;
+        width: 50%;
+        .generalSize();
       }
     }
   }
@@ -214,38 +242,103 @@ header {
 
   h2 {
     .headerSize2();
+    margin-bottom: 2.5%;
   }
 
   h3 {
     .headerSize3();
+    // padding: 5% 0;
   }
 
-  .predator {
+  .education {
+    width: 45%;
+    padding-right: 5%;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    border-right: 2px dotted @colorGray;
+  }
+
+  .school {
+    margin-bottom: 2.5%;
+  }
+
+  .awards {
+    width: 40%;
   }
 }
 
 .section3 {
-  display: flex;
-  flex-wrap: wrap;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: space-evenly;
   margin: 2% 0;
+  .generalSize();
 
   h2 {
     width: 100%;
+    .headerSize2();
+    margin-bottom: 2.5%;
   }
 
-  .doggo {
-    width: 50%;
+  .doggo-box {
     display: flex;
-    flex-direction: column;
-    margin: 1% 0;
+    // flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .doggo {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      margin: 0% 5px;
+      border: 2px solid @colorGray;
+    }
+
+    h3 {
+      .headerSize3();
+      color: @colorBlue;
+    }
 
     p {
       margin: 1% 0;
-      width: 75%;
+      width: 100%;
     }
   }
+}
+
+.section4 {
+  display: flex;
+  flex-direction: column;
+  background-color: @colorLightGray;
+
+  h2 {
+    .headerSize2();
+  }
+
+  .form {
+    padding: 2%;
+  }
+
+  input {
+    margin: 1% 0px;
+  }
+
+  input,
+  textarea {
+    border: 2px dotted @colorGray;
+  }
+
+  button {
+    border-radius: 12px;
+    background-color: white;
+    font-size: 20px;
+    color: @colorBlue;
+  }
+}
+
+footer {
+  .generalSize();
+  text-align: center;
 }
 
 .generalSize {
