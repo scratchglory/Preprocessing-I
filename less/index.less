@@ -144,11 +144,16 @@ body {
   height: 100%;
   width: 100%;
   font-size: 10px;
+  font-family: "Allerta Stencil";
 }
 
 .container {
   width: 900px;
   margin: 0 auto;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 }
 
 h2 {
@@ -162,12 +167,25 @@ header {
     justify-content: flex-end;
     width: 100%;
     padding: 0.5rem;
+    @media (max-width: 500px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
     a {
       text-decoration: none;
       padding: 0.25em;
       margin: 0 0.75rem;
       border: 2px dotted @colorGray;
       font-size: 1.6rem;
+      @media (max-width: 500px) {
+        text-decoration: none;
+        padding: 0.25em;
+        margin: 0 0.75rem;
+        border: 2px dotted @colorGray;
+        font-size: 1.6rem;
+      }
     }
   }
 }
@@ -178,24 +196,35 @@ header {
   display: flex;
   justify-content: space-evenly;
   background-color: @colorLightGray;
+  @media (max-width: 500px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
   h1 {
     text-align: center;
     color: @colorBlue;
     font-size: 3.5rem;
+    @media (max-width: 500px) {
+      //   width: 100%;
+      //   text-align: center;
+    }
   }
 
   .profile {
     margin: 1%;
     width: 400px;
+    @media (max-wdith: 500px) {
+      margin: 0;
+      width: 100%;
+    }
 
     .image {
       text-align: center;
       width: 100%;
-      //   border-radius: 0%;
 
       .charles {
-        //   height: 250px;
         width: 100%;
         border-radius: 90%;
       }
@@ -239,6 +268,10 @@ header {
   display: flex;
   justify-content: space-evenly;
   .generalSize();
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  }
 
   h2 {
     .headerSize2();
@@ -257,21 +290,46 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     border-right: 2px dotted @colorGray;
+    @media (max-width: 500px) {
+      width: 100%;
+      padding-right: 0;
+      border-right: none;
+      border-bottom: 2px dotted @colorGray;
+      padding-bottom: 5%;
+      margin-bottom: 5%;
+    }
   }
 
   .school {
     margin-bottom: 2.5%;
+    @media (max-width: 500px) {
+      margin-left: 15%;
+    }
   }
 
   .awards {
     width: 40%;
+    @media (max-width: 500px) {
+      width: 100%;
+      border-bottom: 2px dotted @colorGray;
+      padding-bottom: 5%;
+      margin-bottom: 5%;
+    }
+
+    h2 {
+      @media (max-width: 500px) {
+        margin-top: 2% 0;
+      }
+    }
+    .school {
+      @media (max-width: 500px) {
+        margin-left: 15%;
+      }
+    }
   }
 }
 
 .section3 {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: space-evenly;
   margin: 2% 0;
   .generalSize();
 
@@ -279,12 +337,18 @@ header {
     width: 100%;
     .headerSize2();
     margin-bottom: 2.5%;
+    @media (max-width: 500px) {
+      margin-bottom: 5%;
+    }
   }
 
   .doggo-box {
     display: flex;
-    // flex-wrap: wrap;
     justify-content: space-evenly;
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     .doggo {
       width: 25%;
@@ -292,6 +356,10 @@ header {
       flex-direction: column;
       margin: 0% 5px;
       border: 2px solid @colorGray;
+      @media (max-width: 500px) {
+        width: 100%;
+        margin-bottom: 2.5%;
+      }
     }
 
     h3 {
@@ -309,6 +377,7 @@ header {
 .section4 {
   display: flex;
   flex-direction: column;
+  background-image: url("http://spolearninglab.com/curriculum/images/winter/for_cookie_cutter/animals/dog_bone_01.png");
   background-color: @colorLightGray;
 
   h2 {
@@ -317,6 +386,10 @@ header {
 
   .form {
     padding: 2%;
+    @media (max-width: 500px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   input {
@@ -339,6 +412,7 @@ header {
 footer {
   .generalSize();
   text-align: center;
+  margin: 5% 0;
 }
 
 .generalSize {
