@@ -151,6 +151,20 @@ p {
   .generalSize();
 }
 
+h2 {
+  .headerSize2();
+  color: @colorIndianRed;
+  border-bottom: 2px solid @colorIndianRed;
+}
+
+h3 {
+  .headerSize3();
+}
+
+.port-img {
+  border-radius: 12px;
+}
+
 .container {
   width: 900px;
   margin: 0 auto;
@@ -158,11 +172,6 @@ p {
   @media (max-width: 500px) {
     width: 100%;
   }
-}
-
-h2 {
-  color: @colorIndianRed;
-  border-bottom: 2px solid @colorIndianRed;
 }
 
 header {
@@ -239,7 +248,6 @@ header {
     width: 100%;
 
     h2 {
-      .headerSize2();
       width: 100%;
       text-align: center;
     }
@@ -260,11 +268,26 @@ header {
       p {
         height: 100%;
         width: 50%;
-        .generalSize();
       }
+    } // skills-info
+  } // skills
+
+  .port {
+    margin: 0 2%;
+    p {
+      height: 90%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      //   text-justify: center;
     }
   }
-}
+
+  .portfolio-image {
+    margin: 2%;
+    .border();
+  }
+} // section1
 
 .section2 {
   width: 100%;
@@ -278,7 +301,6 @@ header {
   }
 
   h2 {
-    .headerSize2();
     margin-bottom: 2.5%;
   }
 
@@ -330,7 +352,7 @@ header {
         margin-left: 15%;
       }
     }
-  }
+  } // awards
 }
 
 .section3 {
@@ -339,7 +361,7 @@ header {
 
   h2 {
     width: 100%;
-    .headerSize2();
+
     margin-bottom: 2.5%;
     @media (max-width: 500px) {
       margin-bottom: 5%;
@@ -384,9 +406,9 @@ header {
   background-image: url("http://spolearninglab.com/curriculum/images/winter/for_cookie_cutter/animals/dog_bone_01.png");
   background-color: @colorLightGray;
 
-  h2 {
-    .headerSize2();
-  }
+  //   h2 {
+  //     .headerSize2();
+  //   }
 
   .form {
     padding: 2%;
@@ -413,6 +435,44 @@ header {
   }
 }
 
+.port1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2% 0;
+
+  .scared-cat {
+    width: 23%;
+    .border();
+  } // scared-cat
+
+  p {
+    height: 100%;
+    width: 50%;
+    padding: 1%;
+  }
+} // port1
+
+.port2 {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  margin: 2% 0;
+
+  .buried-car {
+    width: 50%;
+    .border();
+    margin: 0 2%;
+  }
+
+  p {
+    height: 100%;
+    width: 50%;
+    padding: 1%;
+  }
+} // port2
+
 footer {
   .generalSize();
   text-align: center;
@@ -429,4 +489,11 @@ footer {
 
 .headerSize3 {
   font-size: 2.4rem;
+}
+
+.border() {
+  border-style: dotted;
+  border-width: 3px;
+  border-color: @colorGray;
+  border-radius: 12px;
 }

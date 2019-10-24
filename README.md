@@ -50,4 +50,5 @@ Follow these steps for completing your project.
 
 - Charles : Charles 🇵🇭 on Unsplash
 - Smart Charles : Charles 🇵🇭 on Unsplash
-- Scared-Cat : Max Kleinen on Unsplash
+- Scared-Cat : Borna Bevanda on Unsplash
+- Buried-Car : Riccardo Fissore on Unsplash

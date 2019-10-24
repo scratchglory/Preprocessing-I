@@ -136,6 +136,17 @@ body {
 p {
   font-size: 1.6rem;
 }
+h2 {
+  font-size: 3rem;
+  color: red;
+  border-bottom: 2px solid red;
+}
+h3 {
+  font-size: 2.4rem;
+}
+.port-img {
+  border-radius: 12px;
+}
 .container {
   width: 900px;
   margin: 0 auto;
@@ -144,10 +155,6 @@ p {
   .container {
     width: 100%;
   }
-}
-h2 {
-  color: red;
-  border-bottom: 2px solid red;
 }
 header nav {
   display: flex;
@@ -221,7 +228,6 @@ header nav a {
   width: 100%;
 }
 .section1 .skills h2 {
-  font-size: 3rem;
   width: 100%;
   text-align: center;
 }
@@ -240,7 +246,22 @@ header nav a {
 .section1 .skills .skills-info p {
   height: 100%;
   width: 50%;
-  font-size: 1.6rem;
+}
+.section1 .port {
+  margin: 0 2%;
+}
+.section1 .port p {
+  height: 90%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.section1 .portfolio-image {
+  margin: 2%;
+  border-style: dotted;
+  border-width: 3px;
+  border-color: gray;
+  border-radius: 12px;
 }
 .section2 {
   width: 100%;
@@ -256,7 +277,6 @@ header nav a {
   }
 }
 .section2 h2 {
-  font-size: 3rem;
   margin-bottom: 2.5%;
 }
 .section2 h3 {
@@ -315,7 +335,6 @@ header nav a {
 }
 .section3 h2 {
   width: 100%;
-  font-size: 3rem;
   margin-bottom: 2.5%;
 }
 @media (max-width: 500px) {
@@ -360,9 +379,6 @@ header nav a {
   background-image: url("http://spolearninglab.com/curriculum/images/winter/for_cookie_cutter/animals/dog_bone_01.png");
   background-color: lightgray;
 }
-.section4 h2 {
-  font-size: 3rem;
-}
 .section4 .form {
   padding: 2%;
 }
@@ -384,6 +400,44 @@ header nav a {
   background-color: white;
   font-size: 20px;
   color: blue;
+}
+.port1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2% 0;
+}
+.port1 .scared-cat {
+  width: 23%;
+  border-style: dotted;
+  border-width: 3px;
+  border-color: gray;
+  border-radius: 12px;
+}
+.port1 p {
+  height: 100%;
+  width: 50%;
+  padding: 1%;
+}
+.port2 {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  margin: 2% 0;
+}
+.port2 .buried-car {
+  width: 50%;
+  border-style: dotted;
+  border-width: 3px;
+  border-color: gray;
+  border-radius: 12px;
+  margin: 0 2%;
+}
+.port2 p {
+  height: 100%;
+  width: 50%;
+  padding: 1%;
 }
 footer {
   font-size: 1.6rem;
