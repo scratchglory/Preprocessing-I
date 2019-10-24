@@ -48,4 +48,6 @@ Follow these steps for completing your project.
 
 ## Images:
 
-- Charles - Charles 🇵🇭 on Unsplash
+- Charles : Charles 🇵🇭 on Unsplash
+- Smart Charles : Charles 🇵🇭 on Unsplash
+- Scared-Cat : Max Kleinen on Unsplash
