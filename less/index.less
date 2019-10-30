@@ -4,56 +4,496 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  //   list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
+@colorBlue: blue;
+@colorIndianRed: red;
+@colorGray: gray;
+@colorLightGray: lightgray;
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+  font-family: "Allerta Stencil";
+}
+
+p {
+  .generalSize();
+}
+
+h2 {
+  .headerSize2();
+  color: @colorIndianRed;
+  border-bottom: 2px solid @colorIndianRed;
+}
+
+h3 {
+  .headerSize3();
+}
+
+.port-img {
+  border-radius: 12px;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}
+
+header {
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0.5rem;
+    @media (max-width: 500px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 0.25em;
+      margin: 0 0.75rem;
+      border: 2px dotted @colorGray;
+      font-size: 1.6rem;
+      @media (max-width: 500px) {
+        text-decoration: none;
+        padding: 0.25em;
+        margin: 0 0.75rem;
+        border: 2px dotted @colorGray;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+.section1 {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: @colorLightGray;
+  @media (max-width: 500px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    text-align: center;
+    color: @colorBlue;
+    font-size: 3.5rem;
+    @media (max-width: 500px) {
+      //   width: 100%;
+      //   text-align: center;
+    }
+  }
+
+  .profile {
+    margin: 1%;
+    width: 400px;
+    @media (max-wdith: 500px) {
+      margin: 0;
+      width: 100%;
+    }
+
+    .image {
+      text-align: center;
+      width: 100%;
+
+      .charles {
+        width: 100%;
+        border-radius: 90%;
+      }
+    }
+  }
+
+  .skills {
+    width: 100%;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+    }
+
+    .skills-info {
+      display: flex;
+      justify-content: space-between;
+      margin: 5% 0;
+      ul {
+        .headerSize3();
+        margin: 0 0 0 8%;
+      }
+
+      li {
+        padding: 5%;
+      }
+
+      p {
+        height: 100%;
+        width: 50%;
+      }
+    } // skills-info
+  } // skills
+
+  .port {
+    margin: 0 2%;
+    p {
+      height: 90%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      //   text-justify: center;
+    }
+  }
+
+  .portfolio-image {
+    margin: 2%;
+    .border();
+  }
+} // section1
+
+.section2 {
+  width: 100%;
+  margin: 2% 0;
+  display: flex;
+  justify-content: space-evenly;
+  .generalSize();
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    margin-bottom: 2.5%;
+  }
+
+  h3 {
+    .headerSize3();
+    // padding: 5% 0;
+  }
+
+  .education {
+    width: 45%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-right: 2px dotted @colorGray;
+    @media (max-width: 500px) {
+      width: 100%;
+      padding-right: 0;
+      border-right: none;
+      border-bottom: 2px dotted @colorGray;
+      padding-bottom: 5%;
+      margin-bottom: 5%;
+    }
+  }
+
+  .school {
+    margin-bottom: 2.5%;
+    @media (max-width: 500px) {
+      margin-left: 15%;
+    }
+  }
+
+  .awards {
+    width: 40%;
+    @media (max-width: 500px) {
+      width: 100%;
+      border-bottom: 2px dotted @colorGray;
+      padding-bottom: 5%;
+      margin-bottom: 5%;
+    }
+
+    h2 {
+      @media (max-width: 500px) {
+        margin-top: 2% 0;
+      }
+    }
+    .school {
+      @media (max-width: 500px) {
+        margin-left: 15%;
+      }
+    }
+  } // awards
+}
+
+.section3 {
+  margin: 2% 0;
+  .generalSize();
+
+  h2 {
+    width: 100%;
+
+    margin-bottom: 2.5%;
+    @media (max-width: 500px) {
+      margin-bottom: 5%;
+    }
+  }
+
+  .doggo-box {
+    display: flex;
+    justify-content: space-evenly;
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .doggo {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      margin: 0% 5px;
+      border: 2px solid @colorGray;
+      @media (max-width: 500px) {
+        width: 100%;
+        margin-bottom: 2.5%;
+      }
+    }
+
+    h3 {
+      .headerSize3();
+      color: @colorBlue;
+    }
+
+    p {
+      margin: 1% 0;
+      width: 100%;
+    }
+  }
+}
+
+.section4 {
+  display: flex;
+  flex-direction: column;
+  background-image: url("http://spolearninglab.com/curriculum/images/winter/for_cookie_cutter/animals/dog_bone_01.png");
+  background-color: @colorLightGray;
+
+  //   h2 {
+  //     .headerSize2();
+  //   }
+
+  .form {
+    padding: 2%;
+    @media (max-width: 500px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  input {
+    margin: 1% 0px;
+  }
+
+  input,
+  textarea {
+    border: 2px dotted @colorGray;
+  }
+
+  button {
+    border-radius: 12px;
+    background-color: white;
+    font-size: 20px;
+    color: @colorBlue;
+  }
+}
+
+.port1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2% 0;
+
+  .scared-cat {
+    width: 23%;
+    .border();
+  } // scared-cat
+
+  p {
     height: 100%;
+    width: 50%;
+    padding: 1%;
+  }
+} // port1
+
+.port2 {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  margin: 2% 0;
+
+  .buried-car {
+    width: 50%;
+    .border();
+    margin: 0 2%;
+  }
+
+  p {
+    height: 100%;
+    width: 50%;
+    padding: 1%;
+  }
+} // port2
+
+footer {
+  .generalSize();
+  text-align: center;
+  margin: 5% 0;
 }
 
+.generalSize {
+  font-size: 1.6rem;
+}
+
+.headerSize2 {
+  font-size: 3rem;
+}
+
+.headerSize3 {
+  font-size: 2.4rem;
+}
+
+.border() {
+  border-style: dotted;
+  border-width: 3px;
+  border-color: @colorGray;
+  border-radius: 12px;
+}
